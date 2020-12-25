@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import productRoute from './routes/product.js';
+import  userRoute from './routes/user.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 const app = express();
@@ -26,3 +27,4 @@ app.use(express.json({limit: "10kb"}));
 app.use(cors());
 
 app.use('/api/v1/product',productRoute);
+app.use('/api/v1/user',userRoute);
